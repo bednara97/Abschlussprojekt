@@ -1,0 +1,13 @@
+How-To:
+
+1. CREATE DATABASE abschlussprojekt;
+2. root-Passwort ändern
+	- direkt im JAR-File ändern oder in dbconnection.properties ändern
+3. dump.sql nach C:\Program Files\MySQL\MySQL Server 8.0\bin (oder richtigen MySQL-Pfad) kopieren
+4. cmd dort als admin starten
+5. Folgendes eingeben: 
+   mysql -u root -p abschlussprojekt < dump.sql
+6. root-Passwort bestätigen
+7. Fertig
+
+Alternativ kann auch das File statements.sql verwendet werden, um die Datenbank manuell mittels SQL-Statements zu befüllen.

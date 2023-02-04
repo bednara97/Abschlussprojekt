@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="686.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bednara.controllers.AdvancedSearchController">
+   <children>
+      <MFXDatePicker fx:id="arrivalDatePicker" editable="false" floatMode="INLINE" floatingText="Anreise" layoutX="47.0" layoutY="75.0" minHeight="10.0" prefHeight="45.0" prefWidth="264.0" />
+      <MFXDatePicker fx:id="departureDatePicker" editable="false" floatMode="INLINE" floatingText="Abreise" layoutX="376.0" layoutY="74.0" minHeight="10.0" prefHeight="45.0" prefWidth="264.0" />
+      <MFXTextField fx:id="phoneNumberTextField" floatingText="Telefon Nr." layoutX="47.0" layoutY="265.0" minHeight="30.0" minWidth="150.0" prefHeight="45.0" prefWidth="264.0" />
+      <MFXTextField fx:id="mailAddressTextField" floatingText="E-Mail" layoutX="376.0" layoutY="265.0" minHeight="30.0" minWidth="150.0" prefHeight="45.0" prefWidth="264.0" />
+      <MFXTextField fx:id="guestIDNumberTextField" floatingText="Ausweis Nr" layoutX="47.0" layoutY="169.0" minHeight="30.0" minWidth="150.0" prefHeight="45.0" prefWidth="264.0" />
+      <MFXTextField fx:id="roomNumberTextField" floatingText="Zimmer Nr." layoutX="376.0" layoutY="169.0" minHeight="30.0" minWidth="150.0" prefHeight="45.0" prefWidth="264.0" />
+      <MFXTextField fx:id="cityTextField" floatingText="Stadt" layoutX="47.0" layoutY="367.0" minHeight="30.0" minWidth="150.0" prefHeight="45.0" prefWidth="264.0" />
+      <MFXTextField fx:id="countryTextField" floatingText="Land" layoutX="376.0" layoutY="367.0" minHeight="30.0" minWidth="150.0" prefHeight="45.0" prefWidth="264.0" />
+      <MFXButton buttonType="RAISED" defaultButton="true" layoutX="522.0" layoutY="433.0" minHeight="27.0" onAction="#advancedSearch" prefHeight="30.0" prefWidth="118.0" rippleAnimateShadow="true" rippleAnimationSpeed="0.5" style="-fx-background-radius: 5; -fx-background-color: #7a0ed9;" text="Suchen" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MFXButton>
+      <MFXButton buttonType="RAISED" layoutX="47.0" layoutY="433.0" minHeight="27.0" onAction="#cancel" prefHeight="30.0" prefWidth="118.0" rippleAnimateShadow="true" rippleAnimationSpeed="0.5" style="-fx-background-radius: 5; -fx-background-color: #7a0ed9;" text="Abbrechen" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MFXButton>
+      <Text layoutX="47.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Herkunft" wrappingWidth="102.13671875">
+         <font>
+            <Font name="Open Sans SemiBold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="47.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kontakt" wrappingWidth="102.13671875">
+         <font>
+            <Font name="Open Sans SemiBold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="47.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buchungsdetails" wrappingWidth="118.0">
+         <font>
+            <Font name="Open Sans SemiBold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="47.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anreise/Abreise" wrappingWidth="143.0">
+         <font>
+            <Font name="Open Sans SemiBold" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

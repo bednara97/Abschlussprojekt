@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="376.0" prefWidth="646.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bednara.controllers.ReadGuestProfilesController">
+   <children>
+      <MFXButton fx:id="discardMFXButton" buttonType="RAISED" defaultButton="true" layoutX="32.0" layoutY="321.0" minHeight="27.0" onAction="#cancel" prefHeight="30.0" prefWidth="124.0" rippleAnimateShadow="true" rippleAnimationSpeed="0.5" style="-fx-background-color: #7a0ed9;" text="Abbrechen" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MFXButton>
+      <MFXButton fx:id="confirmMFXButton" buttonType="RAISED" layoutX="494.0" layoutY="320.0" onAction="#confirm" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #7a0ed9;" text="Übernehmen" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MFXButton>
+      <MFXTableView fx:id="readGuestDataTable" layoutX="32.0" layoutY="37.0" prefHeight="257.0" prefWidth="586.0" />
+   </children>
+</AnchorPane>

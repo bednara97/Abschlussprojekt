@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="760.0" prefWidth="1050.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bednara.controllers.FrontDeskController">
+   <children>
+      <MFXTextField fx:id="confirmationNumberTextField" floatingText="Buchungsnummer" layoutX="226.0" layoutY="131.0" minHeight="45.0" minWidth="164.0" prefHeight="45.0" prefWidth="220.0" AnchorPane.bottomAnchor="584.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="604.0" AnchorPane.topAnchor="131.0" />
+      <MFXTextField fx:id="lastNameTextField" floatingText="Nachname" layoutX="465.0" layoutY="131.0" minHeight="45.0" minWidth="164.0" prefHeight="47.0" prefWidth="220.0" />
+      <MFXTextField fx:id="firstNameTextField" floatingText="Vorname" layoutX="704.0" layoutY="132.0" minHeight="45.0" minWidth="170.0" prefHeight="45.0" prefWidth="220.0" />
+      <MFXButton fx:id="advancedSearchMFXButton" buttonType="RAISED" layoutX="223.0" layoutY="702.0" minHeight="27.0" onAction="#openAdvancedSearchWindow" prefHeight="30.0" prefWidth="135.0" rippleAnimateShadow="true" rippleAnimationSpeed="0.5" style="-fx-background-color: #7a0ed9; -fx-background-radius: 5;" text="Erweiterte Suche" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MFXButton>
+      <MFXButton fx:id="openMFXButton" buttonType="RAISED" layoutX="882.0" layoutY="702.0" minHeight="27.0" onAction="#openExistingReservationWindow" prefHeight="30.0" prefWidth="124.0" rippleAnimateShadow="true" rippleAnimationSpeed="0.5" style="-fx-background-color: #7a0ed9; -fx-background-radius: 5;" text="Öffnen" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MFXButton>
+      <MFXTableView fx:id="reservationDataTable" layoutX="223.0" layoutY="192.0" prefHeight="484.0" prefWidth="783.0" AnchorPane.bottomAnchor="84.0" AnchorPane.leftAnchor="223.0" AnchorPane.topAnchor="192.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MFXTableView>
+      <Text fill="#373737" layoutX="233.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rezeption" wrappingWidth="135.0" AnchorPane.bottomAnchor="665.31640625" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="682.0" AnchorPane.topAnchor="62.0">
+         <font>
+            <Font name="Open Sans SemiBold" size="24.0" />
+         </font>
+      </Text>
+      <MFXButton fx:id="createReservationMFXButton" buttonType="RAISED" layoutX="736.0" layoutY="702.0" minHeight="27.0" onAction="#createNewReservationWindow" prefHeight="30.0" prefWidth="124.0" rippleAnimateShadow="true" rippleAnimationSpeed="0.5" style="-fx-background-color: #7a0ed9; -fx-background-radius: 5;" text="Neu" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MFXButton>
+      <Button fx:id="refreshButton" layoutX="971.0" layoutY="640.0" minHeight="16.0" minWidth="16.0" mnemonicParsing="false" onAction="#clear" prefHeight="16.0" prefWidth="16.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="searchButton" layoutX="959.0" layoutY="141.0" mnemonicParsing="false" onAction="#search" prefHeight="24.0" prefWidth="24.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="750.0" prefWidth="205.0" style="-fx-background-color: #7a0ed9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="845.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="dashboardAnchorPane" layoutY="150.0" prefHeight="46.0" prefWidth="204.0" style="-fx-background-color: #7a0ed9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Text fx:id="dashboardText" fill="WHITE" layoutX="56.0" layoutY="28.0" onMouseClicked="#openDashboardWindow" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="91.13671875">
+                     <font>
+                        <Font name="Open Sans SemiBold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+                  <Button fx:id="dashboardButton" layoutX="20.0" layoutY="8.0" minHeight="24.0" minWidth="24.0" mnemonicParsing="false" onAction="#openDashboardWindow" prefHeight="24.0" prefWidth="24.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Button fx:id="logoButton" layoutX="36.0" layoutY="25.0" mnemonicParsing="false" prefHeight="114.0" prefWidth="135.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <AnchorPane fx:id="frontDeskAnchorPane" layoutX="1.0" layoutY="196.0" prefHeight="46.0" prefWidth="204.0" style="-fx-background-color: #7a0ed9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Text fx:id="frontDeskText" fill="WHITE" layoutX="57.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rezeption" wrappingWidth="91.13671875" AnchorPane.leftAnchor="57.0">
+                     <font>
+                        <Font name="Open Sans SemiBold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+                  <Button fx:id="frontDeskButton" layoutX="21.0" layoutY="11.0" minHeight="24.0" minWidth="24.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="24.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="guestProfilesAnchorPane" layoutX="1.0" layoutY="242.0" prefHeight="46.0" prefWidth="204.0" style="-fx-background-color: #7a0ed9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Text fx:id="guestProfilesText" fill="WHITE" layoutX="59.0" layoutY="29.0" onMouseClicked="#openGuestProfilesWindow" strokeType="OUTSIDE" strokeWidth="0.0" text="Gästekartei" wrappingWidth="118.13671875">
+                     <font>
+                        <Font name="Open Sans SemiBold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+                  <Button fx:id="guestProfilesButton" layoutX="20.0" layoutY="12.0" minHeight="24.0" minWidth="24.0" mnemonicParsing="false" onAction="#openGuestProfilesWindow" prefHeight="24.0" prefWidth="24.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="changePasswordAnchorPane" layoutY="288.0" prefHeight="46.0" prefWidth="204.0" style="-fx-background-color: #7a0ed9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Text fx:id="changePasswordText" fill="WHITE" layoutX="59.0" layoutY="28.0" onMouseClicked="#openChangePasswordWindow" strokeType="OUTSIDE" strokeWidth="0.0" text="Passwort ändern" wrappingWidth="124.13671875">
+                     <font>
+                        <Font name="Open Sans SemiBold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+                  <Button fx:id="changePasswordButton" layoutX="21.0" layoutY="11.0" maxWidth="30.0" minHeight="24.0" minWidth="24.0" mnemonicParsing="false" onAction="#openChangePasswordWindow" prefHeight="24.0" prefWidth="24.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="logoutAnchorPane" layoutY="334.0" prefHeight="46.0" prefWidth="204.0" style="-fx-background-color: #7a0ed9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Text fx:id="logoutText" fill="WHITE" layoutX="61.0" layoutY="28.0" onMouseClicked="#logout" strokeType="OUTSIDE" strokeWidth="0.0" text="Ausloggen" wrappingWidth="82.13671875">
+                     <font>
+                        <Font name="Open Sans SemiBold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+                  <Button fx:id="logoutButton" layoutX="22.0" layoutY="11.0" minHeight="24.0" minWidth="24.0" mnemonicParsing="false" onAction="#logout" prefHeight="24.0" prefWidth="24.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="380.0" prefHeight="46.0" prefWidth="204.0" style="-fx-background-color: #7a0ed9;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Text fx:id="userNameText" fill="WHITE" layoutX="61.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="82.13671875">
+                     <font>
+                        <Font name="Open Sans SemiBold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Text>
+                  <Button fx:id="userNameButton" layoutX="23.0" layoutY="11.0" minHeight="24.0" minWidth="24.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="24.0">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
